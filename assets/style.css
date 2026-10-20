@@ -39,7 +39,7 @@ nav.main a.active::after{content:'';position:absolute;left:13px;right:13px;botto
 .mnav .m-x{position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:38px;cursor:pointer}
 /* HERO: фоновое фото + текст поверх */
 .hero{position:relative;min-height:min(78vh,760px);display:flex;align-items:flex-end;background:#232323;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background-image:url('img/hero-bg.jpg');background-size:cover;background-position:center 40%;transform:translateZ(0)}
+.hero::before{content:'';position:absolute;inset:0;background-image:url('../img/hero-bg.jpg');background-size:cover;background-position:center 40%;transform:translateZ(0)}
 .hero-ol{position:absolute;inset:0;background:linear-gradient(180deg, rgba(24,24,24,.38) 0%, rgba(24,24,24,.12) 34%, rgba(24,24,24,.62) 68%, rgba(24,24,24,.9) 100%)}
 .hero-in{position:relative;z-index:2;padding:120px 0 56px;width:100%}
 .hero-in .kick{color:#fff}.hero-in .kick::before{background:#fff}
