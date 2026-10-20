@@ -37,13 +37,19 @@ nav.main a.active::after{content:'';position:absolute;left:13px;right:13px;botto
 .mnav a.active{color:#FF8A8F}
 .mnav .m-tel{margin-top:26px;color:#FF8A8F;font-size:19px;font-weight:700;border:none}
 .mnav .m-x{position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:38px;cursor:pointer}
-/* HERO */
-.hero{position:relative;overflow:hidden}
-.hero-art{width:100%}
+/* HERO: фоновое фото + текст поверх */
+.hero{position:relative;min-height:min(78vh,760px);display:flex;align-items:flex-end;background:#232323;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:url('img/hero-bg.jpg');background-size:cover;background-position:center 40%;transform:translateZ(0)}
+.hero-ol{position:absolute;inset:0;background:linear-gradient(180deg, rgba(24,24,24,.38) 0%, rgba(24,24,24,.12) 34%, rgba(24,24,24,.62) 68%, rgba(24,24,24,.9) 100%)}
+.hero-in{position:relative;z-index:2;padding:120px 0 56px;width:100%}
+.hero-in .kick{color:#fff}.hero-in .kick::before{background:#fff}
+.hero-in h1{color:#fff;font-size:clamp(26px,4.4vw,52px);font-weight:700;line-height:1.1;text-transform:uppercase;letter-spacing:.005em;max-width:980px}
+.hero-in h1 span{color:#FF9EA3}
+.hero-in .h-sub{color:rgba(255,255,255,.88);font-size:clamp(15.5px,1.6vw,19px);max-width:640px;margin-top:14px}
+.hero-in .h-cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
 .hero-strip{background:var(--red);color:#fff}
-.hero-strip .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
-.hero-strip h1{font-size:clamp(22px,3.4vw,40px);font-weight:700;line-height:1.15;text-transform:uppercase;letter-spacing:.01em;max-width:820px}
-.hero-strip p{color:#FFD9DB;font-size:15.5px;max-width:520px}
+.hero-strip .strip-line{font-size:13.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.hero-art{width:100%}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:15px;letter-spacing:.05em;text-transform:uppercase;padding:15px 30px;transition:.3s;cursor:pointer;border:none}
 .btn-r{background:var(--red);color:#fff}
 .btn-r:hover{background:var(--redD)}
